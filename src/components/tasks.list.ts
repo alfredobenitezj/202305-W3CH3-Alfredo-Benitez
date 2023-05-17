@@ -42,8 +42,8 @@ export class TasksList extends Component {
           <li>
             <input type="checkbox" ${item.isadopted ? 'checked' : ''}>
             <span>${item.id}</span>
-            <span>${item.title}</span>
-            <span>${item.owner}</span>
+            <span>${item.name}</span>
+            <span>${item.specie}</span>
             <i class="button" role="button" data-id=${item.id}>🗑️</i>
           </li>`
       )
