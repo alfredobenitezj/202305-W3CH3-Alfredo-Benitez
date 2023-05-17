@@ -1,20 +1,21 @@
 /* eslint-disable no-unused-vars */
-export type TaskStructure = {
+export type PetStructure = {
   id: string;
-  title: string;
-  owner: string;
-  isCompleted: boolean;
+  name: string;
+  specie: string;
+  isadopted: boolean;
 };
 
-export class Task implements TaskStructure {
+export class Task implements PetStructure {
   static generateID() {
     return Math.trunc(Math.random() * 1_000_000_000_000).toString();
   }
 
   id: string;
-  isCompleted: boolean;
+  isadopted: boolean;
+
   constructor(public title: string, public owner: string) {
     this.id = Task.generateID();
-    this.isCompleted = false;
+    this.isadopted = false;
   }
 }
