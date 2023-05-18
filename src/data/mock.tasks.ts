@@ -1,7 +1,7 @@
-import { Task } from '../models/task';
+import { Task } from '../models/taskpet';
 
 export const getMockTasks = (): Task[] => [
-  new Task('Task1', 'Pepe'),
-  new Task('Task2', 'Luisa'),
-  new Task('Task3', 'Ernesto'),
+  new Task('Dog', 'Nela'),
+  new Task('Dog', 'Turbo'),
+  new Task('Cat', 'Cecina'),
 ];

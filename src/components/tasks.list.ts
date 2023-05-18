@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { getMockTasks } from '../data/mock.tasks';
-import { Task } from '../models/task';
+import { Task } from '../models/taskpet';
 import { Component } from './component';
 
 import './tasks.list.css';
@@ -10,7 +10,7 @@ export class TasksList extends Component {
   constructor(selector: string) {
     super(selector);
     this.tasks = getMockTasks();
-    this.tasks[0].isCompleted = true;
+    this.tasks[0].isadopted = true;
     this.render();
     console.log(this.element);
     console.log(this.tasks);
@@ -40,10 +40,10 @@ export class TasksList extends Component {
       .map(
         (item) => `
           <li>
-            <input type="checkbox" ${item.isCompleted ? 'checked' : ''}>
+            <input type="checkbox" ${item.isadopted ? 'checked' : ''}>
             <span>${item.id}</span>
-            <span>${item.title}</span>
-            <span>${item.owner}</span>
+            <span>${item.name}</span>
+            <span>${item.specie}</span>
             <i class="button" role="button" data-id=${item.id}>🗑️</i>
           </li>`
       )
